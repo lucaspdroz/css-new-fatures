@@ -1,0 +1,37 @@
+@keyframes bg-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+
+}
+
+/* To remove !importants, 
+    cascade: https://caniuse.com/?search=cascade
+use @layer */
+
+@layer layer1 {
+    div.background-text {
+        font-size: 50px;
+        color: transparent;
+        background-clip: text;
+        background: url('https://t3.ftcdn.net/jpg/04/28/51/02/360_F_428510221_f1eVs6BjxpBTvhmyUa3C4k8ExuRwHRum.jpg') no-repeat center center / cover;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: bg-animation 30s cubic-bezier(0.3, 0, 0.1, 1) infinite;
+    }
+}
+
+@layer layer2 {
+    .background-text{
+        font-size: 4em;
+    }
+}
+

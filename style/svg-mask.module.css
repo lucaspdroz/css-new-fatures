@@ -1,0 +1,64 @@
+[data-icon="skull"] {
+    /* autoprefixer handles -webkit-mask generation */
+    mask: var(--skull-svg) center / contain no-repeat;
+  }
+  [data-icon="dots"] {
+    mask: var(--dots-svg) center / contain no-repeat;
+  }
+  [data-icon="cloud"] {
+    mask: var(--cloud-svg) center / contain no-repeat;
+  }
+  
+  [data-icon] {
+    --skull-svg: url(https://api.iconify.design/whh:skull.svg);
+    --dots-svg:  url(https://api.iconify.design/mdi:ferris-wheel.svg);
+    --cloud-svg: url(https://api.iconify.design/mdi:apple-icloud.svg);
+  }
+  
+  :root {
+    --icon-skull: 
+      url("https://api.iconify.design/whh:skull.svg") 
+      center / 
+      contain no-repeat;
+  
+    --icon-dots:  url("https://api.iconify.design/mdi:ferris-wheel.svg") center / contain no-repeat;
+    --icon-cloud: url("https://api.iconify.design/mdi:apple-icloud.svg") center / contain no-repeat;
+  }
+  
+  [data-icon] {
+    inline-size: 25vmax;
+    aspect-ratio: 1;
+  }
+  
+  [data-icon="skull"] {
+    background: conic-gradient(from -90deg at 25% 115%, #ff0000, #ff0066, #ff00cc, #cc00ff, #6600ff, #0000ff, #0000ff, #0000ff, #0000ff);
+  } 
+  
+  [data-icon="dots"] {
+    background: cyan;
+  }
+  
+  [data-icon="cloud"] {
+    background: conic-gradient(at 125% 50%, #b78cf7, #ff7c94, #ffcf0d, #ff7c94, #b78cf7);
+  }
+  
+  html {
+    block-size: 100%;
+    color-scheme: light dark;
+  }
+  
+  body {
+    font-size: 300%;
+    min-block-size: 100%;
+    font-family: system-ui, sans-serif;
+    
+    display: grid;
+    place-content: center;
+    gap: 2ch;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
